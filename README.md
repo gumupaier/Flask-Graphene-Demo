@@ -50,8 +50,8 @@ The project defines three types of URLs:
 
 # Suggested Quickstart
 
-The following 
-
+- Install dependencies with `pip install -r requirements.txt`
+- Launch application via `python app.py` from within the `graphene-test` subdirectory.
 
 
 Seed the database via
