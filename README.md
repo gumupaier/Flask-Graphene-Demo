@@ -56,8 +56,8 @@ The following
 
 Seed the database via
 
-1. `POST localhost:5000/users/` with JSON payload '{ "name": "neal" }'
-2. `POST localhost:5000/projects/` with JSON payload '{ "title": "project1", "owner_id": 1 }'
+1. `POST localhost:5000/users/` with JSON payload `{ "name": "neal" }`
+2. `POST localhost:5000/projects/` with JSON payload `{ "title": "project1", "owner_id": 1 }`
 
 
 Then, to test the non-graphene routes:
