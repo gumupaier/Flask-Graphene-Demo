@@ -1,4 +1,4 @@
-# Flask / SQLAlchemy / Graphene Toy
+# Flask / SQLAlchemy / Graphene Demo
 
 This project serves as a demo model to show what an implementation of GraphQL
 with a typical Flask/SQLAlchemy setup might look like, and how the routing
