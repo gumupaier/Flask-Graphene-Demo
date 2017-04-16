@@ -65,7 +65,7 @@ Then, to test the non-graphene routes:
 - `GET localhost:5000/users/`
 - `GET localhost:5000/projects/`
 
-To test the outes using graphene:
+To test the routes using graphene:
 
 - `GET locahost:5000/query?query=query+%7B+users+%7B+name+%7D+%7D`
 - `GET localhost:5000/graphql/?query=query+%7B+users+%7B+name+%7D+%7D`
