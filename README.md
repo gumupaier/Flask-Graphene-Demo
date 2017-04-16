@@ -56,24 +56,24 @@ The following
 
 Seed the database via
 
-`POST localhost:5000/users/` with JSON payload '{ "name": "neal" }'
-`POST localhost:5000/projects/` with JSON payload '{ "title": "project1", "owner_id": 1 }'
+1. `POST localhost:5000/users/` with JSON payload '{ "name": "neal" }'
+2. `POST localhost:5000/projects/` with JSON payload '{ "title": "project1", "owner_id": 1 }'
 
 
 Then, to test the non-graphene routes:
 
-`GET localhost:5000/users/`
-`GET localhost:5000/projects/`
+- `GET localhost:5000/users/`
+- `GET localhost:5000/projects/`
 
 To test the outes using graphene:
 
-`GET locahost:5000/query?query=query+%7B+users+%7B+name+%7D+%7D`
-`GET localhost:5000/graphql/?query=query+%7B+users+%7B+name+%7D+%7D`
+- `GET locahost:5000/query?query=query+%7B+users+%7B+name+%7D+%7D`
+- `GET localhost:5000/graphql/?query=query+%7B+users+%7B+name+%7D+%7D`
 
 and then
 
-`GET localhost:5000/query?query=query+%7B+users+%7B+name%2C+projects+%7B+title+%7D+%7D+%7D`
-`GET localhost:5000/graphql/?query=query+%7B+users+%7B+name%2C+projects+%7B+title+%7D+%7D+%7D`
+- `GET localhost:5000/query?query=query+%7B+users+%7B+name%2C+projects+%7B+title+%7D+%7D+%7D`
+- `GET localhost:5000/graphql/?query=query+%7B+users+%7B+name%2C+projects+%7B+title+%7D+%7D+%7D`
 
 The above query strings are the URL-encoded
 'query { users { name } }' and 'query { users { name, project { title } } }'
