@@ -44,3 +44,40 @@ The project defines three types of URLs:
 - Accepts GET
 - GET returns data specified by the GrapQL query
     - Requires a "query" param in the URL args
+
+
+
+
+# Suggested Quickstart
+
+The following 
+
+
+
+Seed the database via
+
+`POST localhost:5000/users/` with JSON payload '{ "name": "neal" }'
+`POST localhost:5000/projects/` with JSON payload '{ "title": "project1", "owner_id": 1 }'
+
+
+Then, to test the non-graphene routes:
+
+`GET localhost:5000/users/`
+`GET localhost:5000/projects/`
+
+To test the outes using graphene:
+
+`GET locahost:5000/query?query=query+%7B+users+%7B+name+%7D+%7D`
+`GET localhost:5000/graphql/?query=query+%7B+users+%7B+name+%7D+%7D`
+
+and then
+
+`GET localhost:5000/query?query=query+%7B+users+%7B+name%2C+projects+%7B+title+%7D+%7D+%7D`
+`GET localhost:5000/graphql/?query=query+%7B+users+%7B+name%2C+projects+%7B+title+%7D+%7D+%7D`
+
+The above query strings are the URL-encoded
+'query { users { name } }' and 'query { users { name, project { title } } }'
+
+
+
+
